@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Reddit GfyCat",
+    "version": "1.0",
+    "icons": {
+	"16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "description": "This extension loads all gifs in WebM format.",
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*.reddit.com/*"
+            ],
+            "js": [
+                "jquery.js",
+                "gfycat.js"
+            ],
+	    "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": ["jquery.js"]
+}
